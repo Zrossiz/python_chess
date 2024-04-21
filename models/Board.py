@@ -1,7 +1,7 @@
-class Board:
+from .Colors import Colors
 
-    def __int__(self):
-        board = self.draw_cells()
+
+class Board:
 
     def draw_cells(self):
         cells = []
@@ -10,13 +10,13 @@ class Board:
             for j in range(1, 9):
                 if i % 2 != 0:
                     if j % 2 != 0:
-                        row.append('white')
+                        row.append(Colors.WHITE)
                     else:
-                        row.append('black')
+                        row.append(Colors.BLACK)
                 else:
                     if j % 2 != 0:
-                        row.append('black')
+                        row.append(Colors.BLACK)
                     else:
-                        row.append('white')
+                        row.append(Colors.WHITE)
             cells.append(row)
         return cells
