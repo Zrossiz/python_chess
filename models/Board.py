@@ -3,6 +3,8 @@ from models.Colors import Colors
 
 
 class Board:
+    def __init__(self):
+        self.board_cells = []
 
     def draw_cells(self):
         cells = []
@@ -28,4 +30,9 @@ class Board:
                             Cell(self, i - 1, j - 1, Colors.WHITE, None)
                         )
             cells.append(row)
+        self.board_cells = cells
         return cells
+
+    def get_cell(self, x, y):
+        return self.board_cells[x][y]
+
