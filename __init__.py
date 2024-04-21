@@ -1,5 +1,6 @@
 import pygame
 import sys
+
 from models.Board import Board
 from models.Colors import Colors
 
@@ -18,13 +19,14 @@ game_window.fill(WHITE_COLOR)
 
 for i in range(0, 8):
     for j in range(0, 8):
-        if cells[i][j] == Colors.BLACK:
+        cur_cell = cells[i][j]
+        if cur_cell.color == Colors.BLACK:
             pygame.draw.rect(game_window, BLACK_COLOR,
-                             (i * CELL_SIZE, j * CELL_SIZE, CELL_SIZE, CELL_SIZE)
+                             (cur_cell.x * CELL_SIZE, cur_cell.y * CELL_SIZE, CELL_SIZE, CELL_SIZE)
                              )
         else:
             pygame.draw.rect(game_window, WHITE_COLOR,
-                             (i * CELL_SIZE, j * CELL_SIZE, CELL_SIZE, CELL_SIZE)
+                             (cur_cell.x * CELL_SIZE, cur_cell.y * CELL_SIZE, CELL_SIZE, CELL_SIZE)
                              )
 
 while True:
