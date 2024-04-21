@@ -19,5 +19,3 @@ class Figure:
         self.cell.figure = self
         self.logo = None
         self.name = FiguresNames.FIGURE
-
-
