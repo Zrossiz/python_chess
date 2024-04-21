@@ -7,8 +7,8 @@ cells = board_class.draw_cells()
 
 FRAME = 800
 CELL_SIZE = 100
-BLACK_COLOR = (0, 0, 0)
-WHITE_COLOR = (255, 255, 255)
+BLACK_COLOR = (172, 130, 0)
+WHITE_COLOR = (129, 217, 255)
 
 pygame.display.set_caption('Chess')
 game_window = pygame.display.set_mode((FRAME, FRAME))
